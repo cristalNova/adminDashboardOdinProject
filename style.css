@@ -1,4 +1,6 @@
+
 /* resetting */
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -14,6 +16,8 @@ body{
     font-family: Play;
 }
 
+/* main container */
+
 .container{
     height: 100vh;
     display: grid;
@@ -23,6 +27,8 @@ body{
     position: relative;
 }
 
+/* side bar */
+
 .dashboard{
     display: flex;
     grid-template-rows: 1fr;
@@ -30,6 +36,11 @@ body{
     gap: 60px;
     background-color: #2e5856;
     font-weight: bold;
+}
+
+.functions div, .settings div{
+    margin-bottom: 20px;
+    padding-left: 20px;
 }
 
 .logo{
@@ -57,11 +68,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 70px;
-}
-
-.functions div, .settings div{
-    margin-bottom: 20px;
-    padding-left: 20px;
 }
 
 .item{
@@ -103,6 +109,28 @@ body{
     display: none;
 }
 
+/* right content */
+
+.right-container{
+    overflow-y: auto;
+}
+
+.right-container::-webkit-scrollbar{
+    display: none;
+}
+
+/* upper board */
+
+.upper-board{
+    background-color: #497466;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    box-shadow: 0 5px 10px #26464f;
+    position: relative;
+    z-index: 1;
+}
+
 .upper{
     display: flex;
     justify-content: space-between;
@@ -127,24 +155,6 @@ body{
     aspect-ratio: 1;
 }
 
-.right-container{
-    overflow-y: auto;
-}
-
-.right-container::-webkit-scrollbar{
-    display: none;
-}
-
-.upper-board{
-    background-color: #497466;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 40px;
-    box-shadow: 0 5px 10px #26464f;
-    position: relative;
-    z-index: 1;
-}
-
 .upper, .below{
     padding: 15px;
 }
@@ -158,7 +168,6 @@ body{
 .below div:first-child{
     display: flex;
     align-items: center;
-
 }
 
 .below div:first-child img{
@@ -240,6 +249,8 @@ button[type='submit'] img{
 .search-bar input:focus::placeholder {
     color: transparent;
 }
+
+/* above board */
 
 .above-board{
     background-color: #e0ffe0;
@@ -371,4 +382,3 @@ button[type='submit'] img{
     margin-bottom: 20px;
     color: #26464f;
 }
-
